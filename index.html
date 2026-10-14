@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Projet avec Sass</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Sass
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#nesting">Nesting</a></li>
+                <li><a href="#mixins">Mixins</a></li>
+                <li><a href="#extend">Extend</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <!-- PRESENTATION DE SAAS  -->
+
+        <section> 
+            <div class="container">
+                <h2>Présention du preprocesseur Sass</h2>
+                <p>Sass est un langage de <strong>feuilles de style compilé</strong> en CSS. Il permet d'utiliser des <strong>variables, des règles imbriquées, des mixins, des fonctions</strong> et bien plus encore, le tout avec une syntaxe entièrement compatible avec le CSS. Sass aide à <strong>maintenir l'organisation</strong> des feuilles de style volumineuses et facilite le <strong>partage d'éléments de design</strong> au sein d'un même projet ou entre plusieurs projets.</p>
+            </div>
+        </section>
+
+        <!-- VARIABLES -->
+         
+        <section id="variables">
+            <div class="container">
+                <h2>Les variables Sass</h2>
+                <p>Les <strong>variables</strong> Sass sont simples : vous <strong>attribuez une valeur</strong> à un nom commençant par le signe <strong>$</strong>, puis vous pouvez utiliser ce nom à la place de la valeur elle-même.</p>
+                <p>Elles permettent de <strong>réduire les répétitions</strong>, d'effectuer des <strong>calculs complexes, de configurer des bibliothèques</strong>, et bien plus encore.</p>
+                <div class="capture-img">
+                    <p>Déclarations des variables :</p>
+                    <img src="Captures/Déclaration des variables.png" alt="Capture d'écran du code scss de la déclaration des variables">
+
+                    <p>Application dans une class, ici le logo de ce site :</p>
+                    <img src="Captures/Application d'une variables.png" alt="Capture d'écran du code scss de l'application des variables sur une class">
+                </div>
+            </div>
+        </section>
+
+        <!-- NESTING  -->
+
+        <section id="nesting">
+            <div class="container">
+                <h2>Le nesting Sass</h2>
+                <p>L’imbrication permet d’<strong>écrire un sélecteur à l’intérieur d’un autre</strong>. Elle aide à regrouper les règles qui appartiennent à un même composant. Il est déconseillé d'en abuser car le code risque d'être illisble pour soi-même et les autres développeurs amenés à reprendre votre travail.</p>
+                
+                <div class="capture-img">
+                    <p>Exemple de nesting (imbrication), ici la barre de navigation de ce site :</p>
+                    <img src="Captures/Nesting.png" alt="Capture d'écran du code scss du nesting">
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- MIXINS -->
+
+        <section id="mixins">
+                <div class="container">
+                    <h2>Le mixin Sass</h2>
+                    <p>Un mixin est une <strong>recette de déclarations CSS</strong>. Tu le définis avec <strong>@mixin</strong> , puis tu l’insères où tu en as besoin avec <strong>@include</strong>.</p>
+                    
+                    <div class="card-mixin-container">
+                            <div class="card-mixin">Card flex-center</div> 
+                            <div class="card-mixin">Card flex-center</div> 
+                    </div>
+                    <div class="capture-img">
+                        <p>Exemple de mixin avec les 2 cards ci-dessus:</p>
+                        <img src="Captures/Mixins.png" alt="Capture d'écran du code scss des mixins">
+                        
+                    </div>
+                </div>
+        </section>
+
+          <!-- EXTEND -->
+
+        <section id="extend">
+                <div class="container">
+                    <h2>Extend Sass</h2>
+                    <p>La directive @extend en SCSS permet à un sélecteur d'hériter des propriétés CSS d'un autre sélecteur, ce qui évite la duplication de code et rend le style plus propre.</p>
+                    
+                    <div class="card-mixin-container">
+                            <div class="btn-basic">Basic</div> 
+                            <div class="btn-report">Report</div>
+                    </div>
+                    <div class="capture-img">
+                        <p>Exemple de @extend avec les 2 boutons ci-dessus:</p>
+                        <img src="Captures/Extend.png" alt="Capture d'écran du code scss de extend">  
+                    </div>
+                </div>
+        </section>
+        <div>
+            <h2>Lien utile :</h2>
+            <a href="https://sass-lang.com/" target="_blank" class="anchor">Site officiel Sass</a>
+            <a href="https://sass-lang.com/documentation/" target="_blank" class="anchor">Documentation Sass</a>
+        </div>     
+    </main>
+
+    <footer>
+        <p>Alexandre Fournier - &copy;2026</p>
+    </footer>
+</body>
+</html>

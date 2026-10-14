@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// VARIABLES COULEURS 
+
+$color-rose: #CF649A;
+$color-blue: #2C3E50;
+$color-bg: #F8F9FA;
+$color-text: #333333;
+
+$paddingTitle: 1rem 0 1rem 0;
+$paddingContainer: 2rem 0;
+$marginBottom: 1rem;
+$radius: 8px;
+$borderGrey: 1px solid #ccc;
+$boxShadow: 0 0 20px 0 rgba(161, 161, 161, 0.2), 0 0 1vh rgba(0, 133, 255, 0.17), 0 0 0 currentColor;
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: $borderGrey;
+}
+
+section{
+    border-bottom: $borderGrey;
+    // padding: 0 1rem;
+}
+
+.logo{
+    font-size: clamp(2rem, 4vw, 4rem);
+    color: $color-rose;
+    font-weight: bold;
+}
+
+.nav{
+    ul{
+       display: flex;
+       gap: 2rem; 
+       li{
+        list-style: none;
+       }
+       a{
+        text-decoration:none ;
+        color: $color-text;
+         transition: all .2s ease;
+        &:hover{
+        color: $color-rose;
+        }
+       }
+    }
+    
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2{
+    padding: $paddingTitle;
+    color: $color-blue;
+}
+
+p{
+    margin-bottom: $marginBottom;
+}
+
+.capture-img{
+    max-width: 1200px;
+    height: auto;
+    margin-bottom: $marginBottom;
+    img{
+        width: 100%;
+        object-fit: contain;
+        height: auto;
+    }
+}
+
+// MIXINS
+
+@mixin flex-center {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+}
+
+@mixin card {
+    height: 300px;
+    width: 300px;
+    background-color: $color-bg;
+    box-shadow: $boxShadow;
+    color: $color-rose;
+    font-weight: bold;
+}
+
+.card-mixin-container{
+    padding: $paddingContainer;
+    @include flex-center;
+    flex-wrap: wrap
+}
+
+.card-mixin{
+    @include card;
+    @include flex-center;
+}
+
+@mixin anchor{
+    text-decoration: none;
+    color: $color-rose;
+    padding: $paddingTitle;
+}
+
+.anchor {
+    @include anchor;
+    margin-right: 1rem;
+}
+
+// EXTEND 
+
+.btn-basic{
+    padding: 1rem 2rem;
+    background-color: $color-rose;
+    color: white;
+    border-radius: $radius;
+    cursor: pointer;
+}
+
+.btn-report{
+    @extend .btn-basic;
+    background-color: $color-blue;
+}
+
+// FOOTER 
+
+footer{
+    height: 100px;
+    background-color: $color-rose;
+    @include flex-center;
+    color: $color-text;
+    margin-top: 2rem;
+}
